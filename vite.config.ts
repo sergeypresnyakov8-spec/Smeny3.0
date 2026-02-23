@@ -12,7 +12,7 @@ export default defineConfig({
       writeBundle() {
         const filesToCopy = ['sw.js', 'manifest.json'];
         const files = fs.readdirSync('.');
-        files.forEach(file => {
+        files.forEach((file: string) => {
           if (file.startsWith('icon-') && (file.endsWith('.png') || file.endsWith('.jpg'))) {
             filesToCopy.push(file);
           }
